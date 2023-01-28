@@ -37,7 +37,7 @@ contract APIConsumer is ChainlinkClient {
         Chainlink.Request memory request = buildChainlinkRequest(jobId, address(this), this.fulfill.selector);
 
         // Set the URL to perform the GET request on
-        request.add("get", "https://7lsz2q3ku0.execute-api.us-east-1.amazonaws.com/items");
+        request.add("get", "API_ENDPOINT");
 
         request.add("path", "Item.humidity");
 
